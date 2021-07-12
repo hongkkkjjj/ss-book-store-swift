@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To capture or upload photo of the book cover.</string>
 </dict>
 </plist>

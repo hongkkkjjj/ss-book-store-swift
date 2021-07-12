@@ -3,27 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DF52394B837BAD8E763FA32 /* Pods_SS_Book_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182643AE7C61FD8D2B6AEF76 /* Pods_SS_Book_Store.framework */; };
+		BC1C45AE268C25D800B445C2 /* StoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45AD268C25D800B445C2 /* StoryboardSegue.swift */; };
+		BC1C45B4268C2EED00B445C2 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45B3268C2EED00B445C2 /* Util.swift */; };
+		BC1C45B6268C3E2700B445C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45B5268C3E2700B445C2 /* LoginViewController.swift */; };
+		BC1C45BA268C452F00B445C2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45B9268C452F00B445C2 /* GradientView.swift */; };
+		BC1C45BE268C45D300B445C2 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45BD268C45D300B445C2 /* ColorUtil.swift */; };
+		BC1C45C0268C6E5300B445C2 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45BF268C6E5300B445C2 /* BookListTableViewCell.swift */; };
+		BC1C45C2268C782100B445C2 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45C1268C782100B445C2 /* BookListViewController.swift */; };
+		BC1C45C7268C823600B445C2 /* BookListStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45C6268C823600B445C2 /* BookListStructure.swift */; };
+		BC1C45D0268DA83600B445C2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45CF268DA83600B445C2 /* RegisterViewController.swift */; };
+		BC1C45D2268ED32E00B445C2 /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1C45D1268ED32E00B445C2 /* Entry.storyboard */; };
+		BC1C45D4268EE36C00B445C2 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45D3268EE36C00B445C2 /* BookDetailsViewController.swift */; };
+		BC1C45D7269058B100B445C2 /* FirestoreFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45D6269058B100B445C2 /* FirestoreFunction.swift */; };
+		BC1C45D92690601900B445C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC1C45D82690601900B445C2 /* GoogleService-Info.plist */; };
+		BC1C45E02691A00300B445C2 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45DF2691A00300B445C2 /* RegistrationModel.swift */; };
+		BC1C45E32692C16400B445C2 /* UserDefaultUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45E22692C16400B445C2 /* UserDefaultUtil.swift */; };
+		BC1C45E52692EB0A00B445C2 /* ConstantValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45E42692EB0A00B445C2 /* ConstantValue.swift */; };
+		BC1C45E7269303C400B445C2 /* RegistrationRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45E6269303C400B445C2 /* RegistrationRespModel.swift */; };
+		BC1C45EA269541E100B445C2 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C45E9269541E100B445C2 /* LoadingScreen.swift */; };
+		BCC4019C26957EE700821E4E /* boxloading.json in Resources */ = {isa = PBXBuildFile; fileRef = BCC4019B26957EE700821E4E /* boxloading.json */; };
 		BCD5B787268AFD7A007857AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5B786268AFD7A007857AE /* AppDelegate.swift */; };
 		BCD5B789268AFD7A007857AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5B788268AFD7A007857AE /* SceneDelegate.swift */; };
-		BCD5B78B268AFD7A007857AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5B78A268AFD7A007857AE /* ViewController.swift */; };
 		BCD5B78E268AFD7A007857AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD5B78C268AFD7A007857AE /* Main.storyboard */; };
 		BCD5B790268AFD89007857AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD5B78F268AFD89007857AE /* Assets.xcassets */; };
 		BCD5B793268AFD89007857AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD5B791268AFD89007857AE /* LaunchScreen.storyboard */; };
+		BCD5B79E268B0CF4007857AE /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5B79D268B0CF4007857AE /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182643AE7C61FD8D2B6AEF76 /* Pods_SS_Book_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SS_Book_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA7E91ACFE9618837FA5D11 /* Pods-SS Book Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS Book Store.debug.xcconfig"; path = "Target Support Files/Pods-SS Book Store/Pods-SS Book Store.debug.xcconfig"; sourceTree = "<group>"; };
+		BC1C45AD268C25D800B445C2 /* StoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSegue.swift; sourceTree = "<group>"; };
+		BC1C45B3268C2EED00B445C2 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		BC1C45B5268C3E2700B445C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BC1C45B9268C452F00B445C2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		BC1C45BD268C45D300B445C2 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
+		BC1C45BF268C6E5300B445C2 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
+		BC1C45C1268C782100B445C2 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		BC1C45C6268C823600B445C2 /* BookListStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListStructure.swift; sourceTree = "<group>"; };
+		BC1C45CF268DA83600B445C2 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BC1C45D1268ED32E00B445C2 /* Entry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
+		BC1C45D3268EE36C00B445C2 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
+		BC1C45D6269058B100B445C2 /* FirestoreFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreFunction.swift; sourceTree = "<group>"; };
+		BC1C45D82690601900B445C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC1C45DF2691A00300B445C2 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		BC1C45E22692C16400B445C2 /* UserDefaultUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtil.swift; sourceTree = "<group>"; };
+		BC1C45E42692EB0A00B445C2 /* ConstantValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValue.swift; sourceTree = "<group>"; };
+		BC1C45E6269303C400B445C2 /* RegistrationRespModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRespModel.swift; sourceTree = "<group>"; };
+		BC1C45E9269541E100B445C2 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		BCC4019B26957EE700821E4E /* boxloading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxloading.json; sourceTree = "<group>"; };
 		BCD5B783268AFD7A007857AE /* SS Book Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SS Book Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD5B786268AFD7A007857AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD5B788268AFD7A007857AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCD5B78A268AFD7A007857AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCD5B78D268AFD7A007857AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCD5B78F268AFD89007857AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD5B792268AFD89007857AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD5B794268AFD89007857AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD5B79D268B0CF4007857AE /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		F71F0B281A909FD8E90C3B53 /* Pods-SS Book Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SS Book Store.release.xcconfig"; path = "Target Support Files/Pods-SS Book Store/Pods-SS Book Store.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,111 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF52394B837BAD8E763FA32 /* Pods_SS_Book_Store.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B5C011AC94BBF4EED4DAE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA7E91ACFE9618837FA5D11 /* Pods-SS Book Store.debug.xcconfig */,
+				F71F0B281A909FD8E90C3B53 /* Pods-SS Book Store.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		50A3B165A2D31173FFA955CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182643AE7C61FD8D2B6AEF76 /* Pods_SS_Book_Store.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC1C45AC268C23A700B445C2 /* Object Class */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45DB269062EB00B445C2 /* UI Object */,
+				BC1C45DA269062D900B445C2 /* Constant Value */,
+				BC1C45C6268C823600B445C2 /* BookListStructure.swift */,
+				BC1C45E42692EB0A00B445C2 /* ConstantValue.swift */,
+			);
+			path = "Object Class";
+			sourceTree = "<group>";
+		};
+		BC1C45B2268C2ECC00B445C2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45E8269541AE00B445C2 /* Loading Screen */,
+				BC1C45B3268C2EED00B445C2 /* Util.swift */,
+				BC1C45BD268C45D300B445C2 /* ColorUtil.swift */,
+				BC1C45E22692C16400B445C2 /* UserDefaultUtil.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BC1C45C3268C820E00B445C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45DE26919FF500B445C2 /* Entry */,
+				BC1C45D52690589C00B445C2 /* Firestore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC1C45D52690589C00B445C2 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45D6269058B100B445C2 /* FirestoreFunction.swift */,
+			);
+			path = Firestore;
+			sourceTree = "<group>";
+		};
+		BC1C45DA269062D900B445C2 /* Constant Value */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45AD268C25D800B445C2 /* StoryboardSegue.swift */,
+			);
+			path = "Constant Value";
+			sourceTree = "<group>";
+		};
+		BC1C45DB269062EB00B445C2 /* UI Object */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45B9268C452F00B445C2 /* GradientView.swift */,
+				BC1C45BF268C6E5300B445C2 /* BookListTableViewCell.swift */,
+			);
+			path = "UI Object";
+			sourceTree = "<group>";
+		};
+		BC1C45DE26919FF500B445C2 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45DF2691A00300B445C2 /* RegistrationModel.swift */,
+				BC1C45E6269303C400B445C2 /* RegistrationRespModel.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		BC1C45E8269541AE00B445C2 /* Loading Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BCC4019B26957EE700821E4E /* boxloading.json */,
+				BC1C45E9269541E100B445C2 /* LoadingScreen.swift */,
+			);
+			path = "Loading Screen";
+			sourceTree = "<group>";
+		};
 		BCD5B77A268AFD7A007857AE = {
 			isa = PBXGroup;
 			children = (
 				BCD5B785268AFD7A007857AE /* SS Book Store */,
 				BCD5B784268AFD7A007857AE /* Products */,
+				46B5C011AC94BBF4EED4DAE1 /* Pods */,
+				50A3B165A2D31173FFA955CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +192,40 @@
 		BCD5B785268AFD7A007857AE /* SS Book Store */ = {
 			isa = PBXGroup;
 			children = (
+				BC1C45D82690601900B445C2 /* GoogleService-Info.plist */,
 				BCD5B786268AFD7A007857AE /* AppDelegate.swift */,
-				BCD5B788268AFD7A007857AE /* SceneDelegate.swift */,
-				BCD5B78A268AFD7A007857AE /* ViewController.swift */,
-				BCD5B78C268AFD7A007857AE /* Main.storyboard */,
 				BCD5B78F268AFD89007857AE /* Assets.xcassets */,
-				BCD5B791268AFD89007857AE /* LaunchScreen.storyboard */,
 				BCD5B794268AFD89007857AE /* Info.plist */,
+				BC1C45C3268C820E00B445C2 /* Model */,
+				BC1C45AC268C23A700B445C2 /* Object Class */,
+				BCD5B788268AFD7A007857AE /* SceneDelegate.swift */,
+				BCD5B79F268B0D99007857AE /* Storyboard */,
+				BC1C45B2268C2ECC00B445C2 /* Utility */,
+				BCD5B79A268B0C30007857AE /* ViewController */,
 			);
 			path = "SS Book Store";
+			sourceTree = "<group>";
+		};
+		BCD5B79A268B0C30007857AE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BC1C45D3268EE36C00B445C2 /* BookDetailsViewController.swift */,
+				BC1C45C1268C782100B445C2 /* BookListViewController.swift */,
+				BC1C45B5268C3E2700B445C2 /* LoginViewController.swift */,
+				BC1C45CF268DA83600B445C2 /* RegisterViewController.swift */,
+				BCD5B79D268B0CF4007857AE /* SplashScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BCD5B79F268B0D99007857AE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BCD5B791268AFD89007857AE /* LaunchScreen.storyboard */,
+				BCD5B78C268AFD7A007857AE /* Main.storyboard */,
+				BC1C45D1268ED32E00B445C2 /* Entry.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD5B797268AFD89007857AE /* Build configuration list for PBXNativeTarget "SS Book Store" */;
 			buildPhases = (
+				BC22DF0B84BD4D4648606E7D /* [CP] Check Pods Manifest.lock */,
 				BCD5B77F268AFD7A007857AE /* Sources */,
 				BCD5B780268AFD7A007857AE /* Frameworks */,
 				BCD5B781268AFD7A007857AE /* Resources */,
+				A5B26BACE44068C2A756F133 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,21 +288,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD5B793268AFD89007857AE /* LaunchScreen.storyboard in Resources */,
+				BC1C45D2268ED32E00B445C2 /* Entry.storyboard in Resources */,
+				BCC4019C26957EE700821E4E /* boxloading.json in Resources */,
 				BCD5B790268AFD89007857AE /* Assets.xcassets in Resources */,
 				BCD5B78E268AFD7A007857AE /* Main.storyboard in Resources */,
+				BC1C45D92690601900B445C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5B26BACE44068C2A756F133 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SS Book Store/Pods-SS Book Store-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SS Book Store/Pods-SS Book Store-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SS Book Store/Pods-SS Book Store-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC22DF0B84BD4D4648606E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SS Book Store-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BCD5B77F268AFD7A007857AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD5B78B268AFD7A007857AE /* ViewController.swift in Sources */,
+				BC1C45E7269303C400B445C2 /* RegistrationRespModel.swift in Sources */,
+				BC1C45B6268C3E2700B445C2 /* LoginViewController.swift in Sources */,
+				BC1C45C7268C823600B445C2 /* BookListStructure.swift in Sources */,
+				BC1C45E32692C16400B445C2 /* UserDefaultUtil.swift in Sources */,
+				BC1C45D7269058B100B445C2 /* FirestoreFunction.swift in Sources */,
 				BCD5B787268AFD7A007857AE /* AppDelegate.swift in Sources */,
 				BCD5B789268AFD7A007857AE /* SceneDelegate.swift in Sources */,
+				BC1C45D0268DA83600B445C2 /* RegisterViewController.swift in Sources */,
+				BC1C45B4268C2EED00B445C2 /* Util.swift in Sources */,
+				BC1C45C0268C6E5300B445C2 /* BookListTableViewCell.swift in Sources */,
+				BC1C45D4268EE36C00B445C2 /* BookDetailsViewController.swift in Sources */,
+				BC1C45BA268C452F00B445C2 /* GradientView.swift in Sources */,
+				BC1C45AE268C25D800B445C2 /* StoryboardSegue.swift in Sources */,
+				BCD5B79E268B0CF4007857AE /* SplashScreenViewController.swift in Sources */,
+				BC1C45E52692EB0A00B445C2 /* ConstantValue.swift in Sources */,
+				BC1C45BE268C45D300B445C2 /* ColorUtil.swift in Sources */,
+				BC1C45E02691A00300B445C2 /* RegistrationModel.swift in Sources */,
+				BC1C45C2268C782100B445C2 /* BookListViewController.swift in Sources */,
+				BC1C45EA269541E100B445C2 /* LoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +507,7 @@
 		};
 		BCD5B798268AFD89007857AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA7E91ACFE9618837FA5D11 /* Pods-SS Book Store.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +527,7 @@
 		};
 		BCD5B799268AFD89007857AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F71F0B281A909FD8E90C3B53 /* Pods-SS Book Store.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
