@@ -18,9 +18,9 @@ class BookDetailsViewController: UIViewController {
     @IBOutlet private weak var nameView: UIView!
     @IBOutlet private weak var authorView: UIView!
     @IBOutlet private weak var descView: UIView!
-    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var nameTextView: UITextView!
     @IBOutlet private weak var nameErrorMsgLabel: UILabel!
-    @IBOutlet private weak var authorTextField: UITextField!
+    @IBOutlet private weak var authorTextView: UITextView!
     @IBOutlet private weak var authorErrorMsgLabel: UILabel!
     @IBOutlet private weak var descTextView: UITextView!
     @IBOutlet private weak var descErrorMsgLabel: UILabel!
@@ -52,6 +52,8 @@ class BookDetailsViewController: UIViewController {
             setupViewWithDetail(detail)
         } else {
             isEditingBook = true
+            nameTextView.textColor = .lightGray
+            authorTextView.textColor = .lightGray
             descTextView.textColor = .lightGray
             editOrSaveButton.title = "Done"
             coverImageView.layer.borderWidth = 2
@@ -61,8 +63,8 @@ class BookDetailsViewController: UIViewController {
         addBorderToView(view: authorView)
         addBorderToView(view: descView)
         
-        nameTextField.delegate = self
-        authorTextField.delegate = self
+        nameTextView.delegate = self
+        authorTextView.delegate = self
         descTextView.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(coverImageViewAction))
@@ -84,13 +86,15 @@ class BookDetailsViewController: UIViewController {
     }
     
     private func setupViewWithDetail(_ detail: BookDetails) {
-        nameTextField.text = detail.bookTitle
-        authorTextField.text = detail.authorName
+        nameTextView.text = detail.bookTitle
+        authorTextView.text = detail.authorName
         descTextView.text = detail.description
         coverImageView.image = Util.convertBase64StringToImage(imageBase64String: detail.bookImage)
         base64ImageString = detail.bookImage
         
         setUserInteraction()
+        nameTextView.textColor = .black
+        authorTextView.textColor = .black
         descTextView.textColor = .black
     }
     
@@ -104,8 +108,8 @@ class BookDetailsViewController: UIViewController {
     
     private func setUserInteraction() {
         coverImageView.isUserInteractionEnabled = isEditingBook
-        nameTextField.isEnabled = isEditingBook
-        authorTextField.isEnabled = isEditingBook
+        nameTextView.isUserInteractionEnabled = isEditingBook
+        authorTextView.isUserInteractionEnabled = isEditingBook
         descTextView.isUserInteractionEnabled = isEditingBook
         
         if isEditingBook {
@@ -122,13 +126,13 @@ class BookDetailsViewController: UIViewController {
             return
         }
         
-        guard let title = nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !title.isEmpty else {
+        guard let title = nameTextView.text?.trimmingCharacters(in: .whitespacesAndNewlines), !title.isEmpty else {
             nameErrorMsgLabel.text = "Book name is required"
             nameErrorMsgLabel.isHidden = false
             return
         }
         
-        guard let author = authorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !author.isEmpty else {
+        guard let author = authorTextView.text?.trimmingCharacters(in: .whitespacesAndNewlines), !author.isEmpty else {
             authorErrorMsgLabel.text = "Author name is required"
             authorErrorMsgLabel.isHidden = false
             return
@@ -225,29 +229,7 @@ class BookDetailsViewController: UIViewController {
             updateRightBarButtonText()
             setUserInteraction()
             
-            nameTextField.becomeFirstResponder()
-        }
-    }
-}
-
-// MARK: - UITextFieldDelegate
-
-extension BookDetailsViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == nameTextField {
-            authorTextField.becomeFirstResponder()
-        } else if textField == authorTextField {
-            descTextView.becomeFirstResponder()
-        }
-        
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == nameTextField {
-            nameErrorMsgLabel.isHidden = true
-        } else if textField == authorTextField {
-            authorErrorMsgLabel.isHidden = true
+            nameTextView.becomeFirstResponder()
         }
     }
 }
@@ -256,7 +238,10 @@ extension BookDetailsViewController: UITextFieldDelegate {
 
 extension BookDetailsViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        nameErrorMsgLabel.isHidden = true
+        authorErrorMsgLabel.isHidden = true
         descErrorMsgLabel.isHidden = true
+        
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
             textView.textColor = UIColor.black
@@ -264,8 +249,16 @@ extension BookDetailsViewController: UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "About this book"
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            
+            if textView == nameTextView {
+                textView.text = "Book name"
+            } else if textView == authorTextView {
+                textView.text = "Author name"
+            } else if textView == descTextView {
+                textView.text = "About this book"
+            }
+            
             textView.textColor = UIColor.lightGray
         }
     }

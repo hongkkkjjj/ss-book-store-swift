@@ -109,16 +109,16 @@ class BookListViewController: UIViewController {
         switch sortType {
         case .authorAsc:
             sortByAuthorButton.setTitle("Author ↓", for: .normal)
-            bookData.sort(by: { $0.authorName < $1.authorName })
+            bookData.sort(by: { $0.authorName.uppercased() < $1.authorName.uppercased() })
         case .authorDesc:
             sortByAuthorButton.setTitle("Author ↑", for: .normal)
-            bookData.sort(by: { $0.authorName > $1.authorName })
+            bookData.sort(by: { $0.authorName.uppercased() > $1.authorName.uppercased() })
         case .titleAsc:
             sortByNameButton.setTitle("Title ↓", for: .normal)
-            bookData.sort(by: { $0.bookTitle < $1.bookTitle })
+            bookData.sort(by: { $0.bookTitle.uppercased() < $1.bookTitle.uppercased() })
         case .titleDesc:
             sortByNameButton.setTitle("Title ↑", for: .normal)
-            bookData.sort(by: { $0.bookTitle > $1.bookTitle })
+            bookData.sort(by: { $0.bookTitle.uppercased() > $1.bookTitle.uppercased() })
         case .dateAsc:
             sortByDateButton.setTitle("Date ↓", for: .normal)
             bookData.sort(by: { $0.date < $1.date })
