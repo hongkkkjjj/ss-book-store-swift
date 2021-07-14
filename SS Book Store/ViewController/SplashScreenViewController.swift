@@ -14,8 +14,6 @@ class SplashScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupLottieAnimation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,6 +25,10 @@ class SplashScreenViewController: UIViewController {
             }
         })
     }
+    
+    override func viewDidLayoutSubviews() {
+        setupLottieAnimation()
+    }
 
     private func setupLottieAnimation() {
         var animationView = AnimationView()
@@ -37,7 +39,7 @@ class SplashScreenViewController: UIViewController {
 
                 animationView = AnimationView(name: "boxloading")
                 animationView.frame = self.animationContainerView.frame
-                animationView.center = CGPoint(x: self.animationContainerView.bounds.width / 2.0, y: self.animationContainerView.bounds.height / 2.0)
+                animationView.frame = CGRect(x: 0.0, y: 0.0, width: animationView.frame.width, height:  animationView.frame.height)
                 animationView.loopMode = .loop
                 
                 self.animationContainerView.addSubview(animationView)

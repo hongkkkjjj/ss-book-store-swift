@@ -58,19 +58,19 @@ class RegisterViewController: UIViewController {
         passwordErrorMsgLabel.isHidden = true
         reenterPasswordErrorMsgLabel.isHidden = true
         
-        guard let username = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+        guard let username = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !username.isEmpty else {
             usernameErrorMsgLabel.text = "Username cannot be empty"
             usernameErrorMsgLabel.isHidden = false
             return
         }
         
-        guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+        guard let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !password.isEmpty else {
             passwordErrorMsgLabel.text = "Password cannot be empty"
             passwordErrorMsgLabel.isHidden = false
             return
         }
         
-        guard let reenterPassword = reenterPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+        guard let reenterPassword = reenterPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !reenterPassword.isEmpty else {
             reenterPasswordErrorMsgLabel.text = "Reenter password cannot be empty"
             reenterPasswordErrorMsgLabel.isHidden = false
             return

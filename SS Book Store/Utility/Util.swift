@@ -56,7 +56,7 @@ public class Util {
     func keyboardWillHide(keyboardEndFrame: CGRect, scrollView: UIScrollView)
 }
 
-// MARK: - Extension UIViewController
+// MARK: - Ext UIViewController
 
 extension UIViewController {
     // MARK: - Keyboard related
@@ -319,7 +319,7 @@ public extension UIImage {
     }
 }
 
-// MARK: - Extension UIBarButtonItem
+// MARK: - Ext UIBarButtonItem
 
 extension UIBarButtonItem {
 
@@ -334,5 +334,26 @@ extension UIBarButtonItem {
         menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24).isActive = true
 
         return menuBarItem
+    }
+}
+
+// MARK: -  Ext UITraitCollection
+
+extension UITraitCollection {
+
+    var isIpad: Bool {
+        return horizontalSizeClass == .regular && verticalSizeClass == .regular
+    }
+
+    var isIphoneLandscape: Bool {
+        return verticalSizeClass == .compact
+    }
+
+    var isIphonePortrait: Bool {
+        return horizontalSizeClass == .compact && verticalSizeClass == .regular
+    }
+
+    var isIphone: Bool {
+        return isIphoneLandscape || isIphonePortrait
     }
 }

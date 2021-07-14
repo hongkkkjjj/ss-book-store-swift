@@ -29,7 +29,11 @@ class LoadingScreen: NSObject {
                 self.overlayView?.tag = 101
 
                 self.animationView = AnimationView(name: "boxloading")
-                let width = self.overlayView!.frame.width * 0.7
+                
+                let traitCollection = self.overlayView!.traitCollection
+                
+                let factor: CGFloat = (traitCollection.isIphoneLandscape || traitCollection.isIpad) ? 0.5 : 0.7
+                let width = self.overlayView!.frame.width * factor
                 self.animationView.frame = CGRect(x: 0.0, y: 0.0, width: width, height:  width)
                 self.animationView.center = CGPoint(x: view!.view.bounds.width / 2.0, y: view!.view.bounds.height / 2.0)
                 self.animationView.loopMode = .loop

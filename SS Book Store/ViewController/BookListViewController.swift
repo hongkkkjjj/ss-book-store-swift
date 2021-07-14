@@ -51,7 +51,9 @@ class BookListViewController: UIViewController {
     private func getBookList() {
         if ConstantValue.refreshTime == nil || ConstantValue.refreshTime?.compare(Date()) == ComparisonResult.orderedAscending {
             
-            LoadingScreen.shared.showOverlay(view: self)
+            if let navVC = self.navigationController {
+                LoadingScreen.shared.showOverlay(view: navVC)
+            }
             
             FirestoreFunction.getBookDataFromFirestore(completion: { (bookList) in
                 Util.runInMainThread {
@@ -60,7 +62,9 @@ class BookListViewController: UIViewController {
                         ConstantValue.refreshTime = refreshDate
                     }
                     
-                    LoadingScreen.shared.hideOverlay(view: self)
+                    if let navVC = self.navigationController {
+                        LoadingScreen.shared.hideOverlay(view: navVC)
+                    }
                     
                     self.bookData = bookList
                     self.sortBookList()
