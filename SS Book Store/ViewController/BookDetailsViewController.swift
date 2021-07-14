@@ -205,6 +205,8 @@ class BookDetailsViewController: UIViewController {
         imageErrorMsgLabel.isHidden = true
         hideKeyboard()
         
+        let alertController = UIAlertController(title: nil, message: "Select image from", preferredStyle: .actionSheet)
+        
         let action1 = UIAlertAction(title: "Camera", style: .default, handler: {_ in
             self.takePhoto(decision: 1)
         })
@@ -213,7 +215,18 @@ class BookDetailsViewController: UIViewController {
         })
         let action3 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        showAlertDialog(style: .actionSheet, title: nil, message: "Select image from", alertActions: [action1, action2, action3])
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        
+        if let popoverPresentationController = alertController.popoverPresentationController {
+            popoverPresentationController.sourceView = self.view
+            viewDidLayoutSubviews()
+            popoverPresentationController.sourceRect = CGRect(x: coverImageView.frame.maxX, y: coverImageView.frame.midY + 30, width: 0, height: 0)
+            popoverPresentationController.permittedArrowDirections = .left
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - IBAction
